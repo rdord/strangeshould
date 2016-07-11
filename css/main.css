@@ -1,0 +1,443 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+@keyframes "blink" {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: gray;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: gray;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: gray;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: gray;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: gray;
+  }
+}
+
+body {
+  font-family: 'Dosis', sans-serif;
+}
+
+
+.Jaw {
+  position:fixed;
+  left:0px;  
+  width:100%;
+}
+
+.Jaw--lower {
+  bottom: 0px;
+  // height: 67px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 11px;
+}
+
+/* IE 6 */
+* html .header {
+  position:absolute;
+  top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+} 
+
+.Jaw-detail:before {
+  content: "";
+  width: 1px;
+  height: 15px;
+  background-color: gray;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+.Jaw-teeth {
+  z-index: 0;
+  position: relative;
+}
+
+.Jaw-tooth {
+  width: 50px;
+  position:relative;
+  display:inline-block;
+}
+.Jaw-tooth:after {
+  position: absolute;
+  content: "";
+  width: 68px;
+  height: 83px;
+  transform: rotate(36deg) skew(19deg, 37deg);
+  background: white;
+  top: -56px;
+  // border-top: 1px solid black; 
+  // border-left: 1px solid black; 
+}
+
+.Jaw-tooth:nth-child(1) {
+  left: -24px;
+}
+
+.Jaw-tooth:nth-child(21) {
+  right: -24px;
+}
+
+.Jaw-tooth:nth-child(1):after,
+.Jaw-tooth:nth-child(21):after {
+  width: 127px;
+  height: 108px;
+  transform: rotate(28deg) skew(20deg, 34deg);
+}
+
+
+.Jaw-tooth:nth-child(2) {
+  left: -33px;
+}
+
+.Jaw-tooth:nth-child(20) {
+  right: -33px;
+}
+
+
+.Jaw-tooth:nth-child(2):after,
+.Jaw-tooth:nth-child(20):after {
+  width: 143px;
+  height: 117px;
+  transform: rotate(44deg) skew(25deg, 38deg);
+}
+
+
+
+.Jaw-tooth:nth-child(3) {
+  left: -17px;
+}
+
+.Jaw-tooth:nth-child(19) {
+  right: -17px;
+}
+
+
+.Jaw-tooth:nth-child(3):after,
+.Jaw-tooth:nth-child(19):after {
+  width: 99px;
+  height: 107px;
+  transform: rotate(36deg) skew(22deg, 38deg);
+}
+
+
+
+.Jaw-tooth:nth-child(4) {
+  left: -17px;
+}
+
+.Jaw-tooth:nth-child(18) {
+  right: -17px;
+}
+
+
+.Jaw-tooth:nth-child(4):after,
+.Jaw-tooth:nth-child(18):after {
+  width: 63px;
+  height: 83px;
+  transform: rotate(39deg) skew(11deg, 37deg);
+}
+
+
+.Jaw-tooth:nth-child(5) {
+  left: -190px;
+}
+
+.Jaw-tooth:nth-child(17) {
+  right: -190px;
+}
+
+
+.Jaw-tooth:nth-child(5):after,
+.Jaw-tooth:nth-child(17):after {
+  width: 59px;
+  height: 81px;
+  transform: rotate(37deg) skew(11deg, 37deg);
+}
+
+.Jaw-tooth:nth-child(6):nth-child(10)  {
+  transform: scale(-1, 1);
+ }
+
+
+.Jaw-tooth:nth-child(n+6) {
+  left: -24px;
+}
+
+.Jaw-tooth:nth-child(16) {
+  right: -24px;
+}
+
+
+.Jaw-tooth:nth-child(6):after,
+.Jaw-tooth:nth-child(16):after {
+  width: 127px;
+  height: 108px;
+  transform: rotate(28deg) skew(20deg, 34deg);
+}
+
+
+.Jaw-tooth:nth-child(7) {
+  left: -28px;
+}
+
+.Jaw-tooth:nth-child(15) {
+  right: -28px;
+}
+
+
+.Jaw-tooth:nth-child(7):after,
+.Jaw-tooth:nth-child(15):after {
+  width: 143px;
+  height: 117px;
+  transform: rotate(44deg) skew(25deg, 38deg);
+}
+
+
+
+.Jaw-tooth:nth-child(8) {
+  left: -195px;
+  top: -14px;
+}
+
+.Jaw-tooth:nth-child(14) {
+  right: -195px;
+  top: -14px;
+}
+
+
+.Jaw-tooth:nth-child(8):after,
+.Jaw-tooth:nth-child(14):after {
+  width: 99px;
+  height: 107px;
+  transform: rotate(36deg) skew(22deg, 38deg);
+}
+
+
+
+.Jaw-tooth:nth-child(9) {
+  left: -47px;
+  top: -3px;
+}
+
+.Jaw-tooth:nth-child(13) {
+  right: -47px;
+  top: -3px;
+}
+
+
+.Jaw-tooth:nth-child(9):after,
+.Jaw-tooth:nth-child(13):after {
+  width: 63px;
+  height: 73px;
+  transform: rotate(30deg) skew(0deg, 33deg);
+}
+
+
+.Jaw-tooth:nth-child(10) {
+  left: -190px;
+}
+
+.Jaw-tooth:nth-child(12) {
+  right: -190px;
+}
+
+
+.Jaw-tooth:nth-child(10):after,
+.Jaw-tooth:nth-child(12):after {
+  width: 59px;
+  height: 81px;
+  transform: rotate(37deg) skew(11deg, 37deg);
+}
+
+
+
+.Jaw-tooth:nth-child(11) {
+  left: -111px;
+  top: -8px;
+}
+
+.Jaw-tooth:nth-child(22) {
+  left: 642px;
+  top: -27px;
+  transform: scale(-1, 1);
+}
+
+
+.Jaw-tooth:nth-child(11):after,
+.Jaw-tooth:nth-child(22):after {
+  width: 99px;
+  height: 107px;
+  transform: rotate(34deg) skew(25deg, 38deg);
+}
+
+.Jaw-tooth:nth-child(n+12):nth-child(-n+21)  {
+  left: auto;
+  // right: -50px;
+  transform: scale(-1, 1);
+ }
+
+.Jaw-tatooSpace {
+  display: flex;
+  justify-content: center;
+  margin-top: -48px;  
+} 
+
+.Jaw-squig {
+  width: 50px;
+  position:relative;
+  display:inline-block;
+  left: 5px;
+}
+
+.Jaw-squig:nth-child(n+1):nth-child(-n+4),
+.Jaw-squig:nth-child(n+6):nth-child(-n+9),
+.Jaw-squig:nth-child(n+12):nth-child(-n+20) {
+  visibility: hidden;
+}
+
+.Jaw-squig:nth-child(10),
+.Jaw-squig:nth-child(11) {
+  left: 16px;
+}
+
+.Jaw-squig:nth-child(21) {
+  left: auto;
+  right: -28px;
+}
+
+.Jaw-squig:after {
+  position: absolute;
+  content: "";
+  width: 68px;
+  height: 83px;
+  transform: rotate(36deg) skew(19deg, 37deg);
+  background: white;
+  top: -75px;
+  // border-top: 1px solid black; 
+  // border-left: 1px solid black; 
+}
+
+.Jaw-tatoo {
+  font-size: 16px;
+  border: 1px solid black;
+  padding: 6px;
+  display: inline-block;
+  font-weight: 400;
+  align-self: flex-end;
+  margin: 0;
+  z-index: 1;
+  margin-left: -5px;
+}
+
+.Jaw--upper {
+  top: -58px;
+}
+
+.Mouthpiece {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  transform: rotate(270deg);
+  align-items: center;
+  justify-content: center;
+}
+
+.Mouthpiece {
+  list-style: none;
+  padding: 0;
+}
+
+.Mouthpiece > li > a {
+  background-color: white;
+      padding: 0px;
+      font-size: 16px;
+    // border: 1px solid black;
+    text-transform: uppercase;
+    
+    color: black;
+    z-index: 1;
+    position: relative;
+
+}
+
+
+.Mouthpiece > li > a:hover {
+  background-color: tomato;
+  text-decoration: none;
+  z-index: 3000;
+  border: 1px solid black;
+  padding: 6px;
+}
+
+body {
+  min-width: 320px;
+}
+
+@media (max-width: 622px) {
+  .Jaw {
+    transform: scaleY(0.6);
+  }
+
+  .Jaw--upper {
+        top: -118px;
+        left: 25px;
+  }
+
+  .Jaw--lower {
+        bottom: -126px;
+    left: 28px;
+  }
+
+  // .Jaw-tooth:after,
+  // .Jaw-squig:after {
+  //       background: #663399;
+  // }
+}
+
+
+
+
