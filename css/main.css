@@ -1,55 +1,56 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-@keyframes "blink" {
-  from, to {
-    background-color: transparent;
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.8;
   }
   50% {
-    background-color: gray;
+    opacity: 0.6;
+  }
+  75% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  75% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.2;
   }
 }
 
-@-moz-keyframes blink {
-  from, to {
-    background-color: transparent;
-  }
-  50% {
-    background-color: gray;
-  }
-}
-
-@-webkit-keyframes "blink" {
-  from, to {
-    background-color: transparent;
-  }
-  50% {
-    background-color: gray;
-  }
-}
-
-@-ms-keyframes "blink" {
-  from, to {
-    background-color: transparent;
-  }
-  50% {
-    background-color: gray;
-  }
-}
-
-@-o-keyframes "blink" {
-  from, to {
-    background-color: transparent;
-  }
-  50% {
-    background-color: gray;
-  }
+.is-animating {
+  -webkit-animation: fadeout 2s;
+  animation: fadeout 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 body {
   font-family: 'Dosis', sans-serif;
+  opacity: 1;
 }
 
+a:focus {
+  outline: none;
+}
 
 .Jaw {
   position:fixed;
@@ -59,7 +60,6 @@ body {
 
 .Jaw--lower {
   bottom: 0px;
-  // height: 67px;
   background: white;
   display: flex;
   flex-direction: column;
@@ -97,6 +97,7 @@ body {
   position:relative;
   display:inline-block;
 }
+
 .Jaw-tooth:after {
   position: absolute;
   content: "";
@@ -105,8 +106,6 @@ body {
   transform: rotate(36deg) skew(19deg, 37deg);
   background: white;
   top: -56px;
-  // border-top: 1px solid black; 
-  // border-left: 1px solid black; 
 }
 
 .Jaw-tooth:nth-child(1) {
@@ -124,7 +123,6 @@ body {
   transform: rotate(28deg) skew(20deg, 34deg);
 }
 
-
 .Jaw-tooth:nth-child(2) {
   left: -33px;
 }
@@ -133,15 +131,12 @@ body {
   right: -33px;
 }
 
-
 .Jaw-tooth:nth-child(2):after,
 .Jaw-tooth:nth-child(20):after {
   width: 143px;
   height: 117px;
   transform: rotate(44deg) skew(25deg, 38deg);
 }
-
-
 
 .Jaw-tooth:nth-child(3) {
   left: -17px;
@@ -151,15 +146,12 @@ body {
   right: -17px;
 }
 
-
 .Jaw-tooth:nth-child(3):after,
 .Jaw-tooth:nth-child(19):after {
   width: 99px;
   height: 107px;
   transform: rotate(36deg) skew(22deg, 38deg);
 }
-
-
 
 .Jaw-tooth:nth-child(4) {
   left: -17px;
@@ -169,14 +161,12 @@ body {
   right: -17px;
 }
 
-
 .Jaw-tooth:nth-child(4):after,
 .Jaw-tooth:nth-child(18):after {
   width: 63px;
   height: 83px;
   transform: rotate(39deg) skew(11deg, 37deg);
 }
-
 
 .Jaw-tooth:nth-child(5) {
   left: -190px;
@@ -185,7 +175,6 @@ body {
 .Jaw-tooth:nth-child(17) {
   right: -190px;
 }
-
 
 .Jaw-tooth:nth-child(5):after,
 .Jaw-tooth:nth-child(17):after {
@@ -196,8 +185,7 @@ body {
 
 .Jaw-tooth:nth-child(6):nth-child(10)  {
   transform: scale(-1, 1);
- }
-
+}
 
 .Jaw-tooth:nth-child(n+6) {
   left: -24px;
@@ -207,14 +195,12 @@ body {
   right: -24px;
 }
 
-
 .Jaw-tooth:nth-child(6):after,
 .Jaw-tooth:nth-child(16):after {
   width: 127px;
   height: 108px;
   transform: rotate(28deg) skew(20deg, 34deg);
 }
-
 
 .Jaw-tooth:nth-child(7) {
   left: -28px;
@@ -224,15 +210,12 @@ body {
   right: -28px;
 }
 
-
 .Jaw-tooth:nth-child(7):after,
 .Jaw-tooth:nth-child(15):after {
   width: 143px;
   height: 117px;
   transform: rotate(44deg) skew(25deg, 38deg);
 }
-
-
 
 .Jaw-tooth:nth-child(8) {
   left: -195px;
@@ -244,15 +227,12 @@ body {
   top: -14px;
 }
 
-
 .Jaw-tooth:nth-child(8):after,
 .Jaw-tooth:nth-child(14):after {
   width: 99px;
   height: 107px;
   transform: rotate(36deg) skew(22deg, 38deg);
 }
-
-
 
 .Jaw-tooth:nth-child(9) {
   left: -47px;
@@ -264,14 +244,12 @@ body {
   top: -3px;
 }
 
-
 .Jaw-tooth:nth-child(9):after,
 .Jaw-tooth:nth-child(13):after {
   width: 63px;
   height: 73px;
   transform: rotate(30deg) skew(0deg, 33deg);
 }
-
 
 .Jaw-tooth:nth-child(10) {
   left: -190px;
@@ -281,15 +259,12 @@ body {
   right: -190px;
 }
 
-
 .Jaw-tooth:nth-child(10):after,
 .Jaw-tooth:nth-child(12):after {
   width: 59px;
   height: 81px;
   transform: rotate(37deg) skew(11deg, 37deg);
 }
-
-
 
 .Jaw-tooth:nth-child(11) {
   left: -111px;
@@ -312,7 +287,6 @@ body {
 
 .Jaw-tooth:nth-child(n+12):nth-child(-n+21)  {
   left: auto;
-  // right: -50px;
   transform: scale(-1, 1);
  }
 
@@ -352,14 +326,11 @@ body {
   height: 83px;
   transform: rotate(36deg) skew(19deg, 37deg);
   background: white;
-  top: -75px;
-  // border-top: 1px solid black; 
-  // border-left: 1px solid black; 
+  top: -75px; 
 }
 
 .Jaw-tatoo {
   font-size: 16px;
-  border: 1px solid black;
   padding: 6px;
   display: inline-block;
   font-weight: 400;
@@ -381,7 +352,6 @@ body {
   left: 0;
   display: flex;
   flex-direction: column;
-  transform: rotate(270deg);
   align-items: center;
   justify-content: center;
 }
@@ -392,29 +362,44 @@ body {
 }
 
 .Mouthpiece > li > a {
+  text-transform: uppercase;
+  position: relative;
+  font-size: 20px;
+  padding: 1px 12px;
+  display: inline-block;
+  font-weight: 400;
+  align-self: flex-end;
+  margin: 0;
+  z-index: 1;
+  margin-left: -5px;
+  background-color: rgba(0,0,0,.4);
+  color: white;
+  letter-spacing: .7em;
+  text-decoration: none;
   background-color: white;
-      padding: 0px;
-      font-size: 16px;
-    // border: 1px solid black;
-    text-transform: uppercase;
-    
-    color: black;
-    z-index: 1;
-    position: relative;
-
+  color: rgba(0,0,0,.8);
+  box-shadow: -1px 1px 6px 0px rgba(50, 50, 50, 0.55);
+  top: 0;
+  left: 0;
+  transition: box-shadow .5s ease-in;
 }
 
 
 .Mouthpiece > li > a:hover {
-  background-color: tomato;
-  text-decoration: none;
+  background-color: white;
+  color: rgba(0,0,0,.8);
   z-index: 3000;
-  border: 1px solid black;
-  padding: 6px;
+  text-decoration: none;
+  box-shadow: -1px 1px 420px 380px rgba(50, 50, 50, 0.27);
+  transition: box-shadow 10s ease-out;
 }
+
 
 body {
   min-width: 320px;
+  overflow: scroll;
+  position: relative;
+  z-index: 0;
 }
 
 @media (max-width: 622px) {
@@ -432,12 +417,31 @@ body {
     left: 28px;
   }
 
-  // .Jaw-tooth:after,
-  // .Jaw-squig:after {
-  //       background: #663399;
-  // }
 }
 
+.Guard {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  z-index: 300;
+  width: 100%; 
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  background: url(../images/ezgif-188120033.gif) no-repeat center top;
+  background-size: cover;
+  
+
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+  filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
+
+}
 
 
